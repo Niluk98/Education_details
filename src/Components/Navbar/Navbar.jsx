@@ -26,7 +26,7 @@ const Navbar = () => {
         <div class="collapse navbar-collapse" id="navbarNav" style={{marginLeft:'5rem'}}>
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" style={{cursor:'pointer'}} onClick={()=>{navigate('contacts')}}>
+              <a class="nav-link active" aria-current="page" style={{cursor:'pointer'}} onClick={()=>{navigate('home')}}>
                 Home
               </a>
             </li>
@@ -41,7 +41,7 @@ const Navbar = () => {
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
+              <a class="nav-link " style={{cursor:'pointer'}} onClick={()=>{navigate('contacts')}}>Education</a>
             </li>
           </ul>
         </div>
