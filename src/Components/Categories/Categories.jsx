@@ -37,11 +37,11 @@ const handleChange=()=>{
     <div className='container' style={{width:'100%',display:'flex',flexDirection:'column',justifyContent:'center'}}>
       <div className="items" style={{marginleft:'20rem',padding:'0 10rem',display:'grid',gridTemplateColumns:'1fr 1fr'}}>
       {data?.map((item,index)=>{
-        return <div key={index} class="card" style={{width:'20rem',height:'30rem',margin:'2rem 0'}}>
+        return <div key={index} class="card" style={{width:'20rem',minHeight:'30rem',margin:'2rem 0'}}>
         <img class="card-img-top" src={item.image} style={{height:'15rem'}} alt="Card image cap"/>
         <div class="card-body">
           <h5 class="card-title">{item.title}</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text">{item.description}</p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
