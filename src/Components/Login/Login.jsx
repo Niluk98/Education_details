@@ -34,7 +34,7 @@ const Login = () => {
   }
 
   return (
-    <div className="conatainer" style={{background:'black',minHeight:'100vh',display:'flex',justifyContent:'center',alignItems:'center'}}>
+    <div className="conatainer" style={{background:'transparent',minHeight:'100vh',display:'flex',justifyContent:'center',alignItems:'center'}}>
       <div className='container' style={{padding:'2rem',background:'#FFF',minHeight:'25rem',width:'40rem',borderRadius:'1rem'}}>
         <form >
   <div className="mb-3">

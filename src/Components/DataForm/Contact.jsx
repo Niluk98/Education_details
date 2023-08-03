@@ -10,8 +10,7 @@ const Contact = () => {
 
   const [education,setEducation]=useState([{
     degree:'',
-    university:'',
-    passpout:''
+    university:''
 
   }]);
  
@@ -19,6 +18,8 @@ const Contact = () => {
   const handleEducationDetails=(e)=>{
     e.preventDefault();
     setStudyCount(studyCount+1);
+
+
     const newEducation={
       degree:'',
       university:'',
@@ -42,18 +43,20 @@ const Contact = () => {
   }
   const handleEducationChange=(e,index)=>{
     
-    const eduDetails=[...education];
-    eduDetails[index]={
-      [e.target.name]:e.target.value,
-
-    }
-    setEducation(eduDetails);
+    let eduDetails={...education[index]};
+    eduDetails={...eduDetails,[e.target.name]:e.target.value}
+    let eduArray=[...education];
+    eduArray[index]=eduDetails;
+    setEducation(eduArray);
     setData({...data,education:education});
+    console.log('eduarray',eduArray);
        
   }
   const handleSubmit=(e)=>{
     e.preventDefault();
     setFinalData(data);
+    console.log('final final',finalData);
+    alert('Submitted')
     
   }
 
@@ -83,7 +86,7 @@ const Contact = () => {
   </div>
   <div className="mb-3">
     <label htmlFor="exampleInputPassword1" className="form-label">University</label>
-    <input type="text" className="form-control" name='univesity' id="exampleInputPassword1" onChange={(e)=>handleEducationChange(e,index)}/>
+    <input type="text" className="form-control" name='university' id="exampleInputPassword1" onChange={(e)=>handleEducationChange(e,index)}/>
   </div>
   {index===0?null:<button className='btn btn-danger btn-xs' onClick={(e)=>handleDelete(e,index)}>Delete</button>}
 
